@@ -167,7 +167,7 @@ async function claudeInit() {
       }
       const question = content[1]
       
-      if (question.trim() === '/私聊') {
+      if (question.trim().includes("/私聊")) {
         try {
           // 创建私信会话
           let { data: createDirectMsgRes } = await client.directMessageApi.createDirectMessage({
